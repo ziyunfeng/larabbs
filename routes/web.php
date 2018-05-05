@@ -13,7 +13,7 @@
 
 Route::get('/', 'PagesController@root')->name('root');
 
-
+Route::resource('users', "UsersController", ['only'=> ['show', 'update', 'edit']]);
 
 /**
  * Auth::routes();  等价于以下路由
